@@ -1,0 +1,16 @@
+name = "homework-pwa"
+main = "worker/index.js"
+compatibility_date = "2026-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "homework_db"
+database_id = "REPLACE_WITH_ID_AFTER_WRANGLER_D1_CREATE"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+TOKEN_SECRET = "dev-only-change-me-before-deploying"
