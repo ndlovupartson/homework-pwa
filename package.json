@@ -1,0 +1,20 @@
+{
+  "name": "homework-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Zero-budget teacher-to-learner homework PWA.",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-sw-manifest.js && vite build",
+    "preview": "vite preview",
+    "worker:dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "db:schema:local": "wrangler d1 execute homework_db --local --file=worker/db/schema.sql",
+    "db:schema:remote": "wrangler d1 execute homework_db --remote --file=worker/db/schema.sql"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "wrangler": "^3.0.0"
+  }
+}
