@@ -1,0 +1,105 @@
+/* Design tokens — see decision log in the architecture doc / Phase 2 notes.
+   Referenced by every screen from Phase 4 onward; change once here. */
+
+:root {
+  /* Palette */
+  --ink: #16211C;
+  --paper: #EAF0EA;
+  --paper-raised: #FFFFFF;
+  --primary: #1F3A32;        /* deep blackboard green — nav, headers */
+  --primary-ink: #EAF0EA;    /* text/icons placed on --primary */
+  --accent: #E3A72E;         /* chalk-gold — reserved for the ONE primary action per screen */
+  --accent-ink: #16211C;
+  --info: #3D6E82;           /* links, informational states */
+  --error: #B3492B;
+  --error-bg: #F5E4DD;
+  --success: #2F6B4F;
+  --success-bg: #E1EEE5;
+  --border: #CFDACE;
+  --muted: #5C6B60;
+
+  /* Type */
+  --font-display: 'Baloo 2', 'Segoe UI Rounded', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-code: 'DejaVu Sans Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2rem;
+
+  /* Layout */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --nav-height: 64px;
+  --tap-min: 44px; /* minimum comfortable tap target, primary-school-appropriate */
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, .heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 var(--space-2) 0;
+}
+
+button, .btn {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  min-height: var(--tap-min);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: var(--paper-raised);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.code-display {
+  font-family: var(--font-code);
+  letter-spacing: 0.08em;
+  font-size: var(--text-lg);
+}
+
+/* Respect reduced-motion preference, per accessibility floor */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Visible keyboard focus everywhere — never suppressed */
+:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 2px;
+}
