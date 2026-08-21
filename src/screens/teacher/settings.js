@@ -91,4 +91,4 @@ export async function renderSettings(ctx) {
       fileInput.value = '';
     }
   });
-}
+    }
