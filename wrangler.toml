@@ -5,7 +5,7 @@ compatibility_date = "2026-08-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "homework_db"
-database_id = "REPLACE_WITH_ID_AFTER_WRANGLER_D1_CREATE"
+database_id = "2f5a9b2f-444b-4dbb-abf2-0cde7b711507"
 
 [assets]
 directory = "./dist"
