@@ -1,0 +1,16 @@
+{
+  "name": "Homework",
+  "short_name": "Homework",
+  "description": "Offline-first homework for classrooms — no accounts, no internet required to work.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#EAF0EA",
+  "theme_color": "#1F3A32",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
